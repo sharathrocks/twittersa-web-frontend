@@ -1,0 +1,2 @@
+TwitterSentimentAnalyser = {};
+TwitterSentimentAnalyser.UIManager = {};

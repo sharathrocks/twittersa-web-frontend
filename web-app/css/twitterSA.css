@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "circula";
+    src: url("../fonts/circula-medium.otf");
+}
+@font-face {
+    font-family: "Steinerlight";
+    src: url("../fonts/Steinerlight.ttf");
+}
+@font-face {
+    font-family: "acid";
+    src: url("../fonts/acid.otf");
+}
+@font-face {
+    font-family: "Diavlo_BOOK_II_37";
+    src: url("../fonts/Diavlo_BOOK_II_37.otf");
+}
+html {
+	font-family:Helvetica, arial, freesans, clean, sans-serif;
+}
+.head{
+	font-family:'Diavlo_BOOK_II_37';
+	text-align:center;
+	font-size:60px;
+	padding-top:55px;
+}
+.searchBoxContainer{
+	text-align:center;
+	width:500px;
+	margin:auto;
+	padding:50px 0;
+}
+.searchBox {
+	width:400px;
+	height:20px;
+	float:left;
+}
+.searchButton {
+	margin-left:20px;
+}
+.signInButton {
+	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -101px;
+	width: 382px;
+	height: 62px;
+	margin:auto;
+	cursor:pointer;
+	display:block;
+}
+.signInButton:hover{
+	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -19px;	
+	
+}
+.signInButton:active{
+	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -182px;	
+	
+}
+.appDescription {
+	font-size:16px; 
+	margin: 36px 0 10px 0;
+	text-align:center;
+}
+
+.section {
+    border: 1px solid #EEEEEE;
+    margin: 6px 0;
+    padding: 6px 10px;
+	border-radius:13px;
+}
+.positive {
+    background-color: #EEFFCC;
+    border-color: #C6DD97;
+    border-width: 2px;
+}
+.negative {
+    background-color: #FFE0E0;
+    border-color: #FFC2C2;
+    border-width: 2px;
+}
+.neutral {
+    border-color: #DDDDDD;
+}
+.tweetHeader {
+	background-color:#cccccc;
+	padding:0 5px;
+}
+.tweetTextContent {
+	padding-left:5px;
+}
+.tweetPostedAt {
+	font-size: 12px;
+	padding-left:5px;
+}
+.searchLoadingOverlay {
+	height:100%;
+	width:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background-color:#000;
+	opacity:0.7;
+	display:none;
+}
+.searchLoadingOverlayTextContainer {
+	height:100px;
+	width:100px;
+	background-color:#999;
+	display:none;
+}
+.overlaySpinner {
+	background:url('../images/spinner_transparent.gif');
+	height:100px;
+	width:100px;
+}
+.fixedCenter {
+	position: fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	margin:auto;
+}
+.footer {
+	position:absolute;
+	bottom:0;
+	right: 5px;
+	font-size: 12px;
+}
+.line2 {
+	margin: 0 0 15px 0;
+}
+.error {
+	color:#ff0000;
+}
