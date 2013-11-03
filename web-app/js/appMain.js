@@ -39,7 +39,7 @@ $(document).ready(function($){
 		TwitterSentimentAnalyser.UIManager.showLoadingOverlay(true);
 		$.ajax("/twitterSA/application/searchTweets",{
 			data:{
-				searchString:$.trim($("#twitterSearchBox").val())
+				searchString:encodeURIComponent($.trim($("#twitterSearchBox").val()))
 			},
 			dataType:"json",
 			success: function (data) {

@@ -6,7 +6,8 @@
 <div id='searchLoadingOverlay' class='searchLoadingOverlay'></div>
 <div id='searchLoadingOverlayTextContainer' class='searchLoadingOverlayTextContainer fixedCenter'><div class='overlaySpinner'></div></div>
 <div class='head'>Twitter sentiment analyser</div>
-<div class='appDescription'>Discover the Twitter sentiment for a product or brand.</div>
+<div class='appDescription'>Check out what twitterzens feel about your favorite topic.</div>
+<div class='appDescription line2'>To get started, enter the topic of your interest and hit the search button.</div>
 <div class='searchBoxContainer'>
 <input class='searchBox' type='text' placeholder='Search Twitter' id="twitterSearchBox">
 <input type='button' name='searchButton' class='searchButton' value='Search' id='twitterSearch'>
@@ -15,7 +16,7 @@
 <div class='searchResultsContainer' id='searchResultsContainer'>
 
 </div>
-
+<div class='footer' id='footer'>&copy;&nbsp;Sharath BS, Manipal University, Manipal</div>
 <script type='template' id="tweetDisplayTemplate">
 <div class="section neutral">
 	<div class='tweetHeader'>${'<%='}twitterActualName${'%>'}&nbsp;(<a href="http://www.twitter.com/${'<%='}twitterUserName${'%>'}" class="twitter-username" target="_blank">@${'<%='}twitterUserName${'%>'}</a>):</div>
