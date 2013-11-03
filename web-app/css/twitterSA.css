@@ -101,14 +101,14 @@ html {
 }
 .searchLoadingOverlayTextContainer {
 	height:100px;
-	width:100px;
+	width:200px;
 	background-color:#999;
 	display:none;
 }
 .overlaySpinner {
-	background:url('../images/spinner_transparent.gif');
+	background:url('../images/searching.gif');
 	height:100px;
-	width:100px;
+	width:200px;
 }
 .fixedCenter {
 	position: fixed;
