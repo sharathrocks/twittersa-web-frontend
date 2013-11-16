@@ -5,6 +5,7 @@ $(document).ready(function($){
 		var statusList = twitterResponse.statuses;
 		var tweetTemplateObj = null;
 		var tweetTemplate = _.template($('#tweetDisplayTemplate').html());
+		$("#searchResultsContainer").empty();
 		for(var i=0,iLen=statusList.length;i<iLen;i++) {
 			tweetTemplateObj = {
 				twitterActualName:statusList[i].user.name,
