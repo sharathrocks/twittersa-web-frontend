@@ -12,13 +12,19 @@
 <input class='searchBox' type='text' placeholder='Search Twitter' id="twitterSearchBox">
 <input type='button' name='searchButton' class='searchButton' value='Search' id='twitterSearch'>
 </div>
+<div id='searchOptions' class='optionsText'>
+
+<div>Include Retweets?</div>
+<input type='radio' name='includeRetweets' value='0' checked='checked'>No <br>
+<input type='radio' name='includeRetweets' value='1'>Yes
+</div>
 
 <div class='searchResultsContainer' id='searchResultsContainer'>
 
 </div>
 <div class='footer' id='footer'>&copy;&nbsp;Sharath BS, Manipal University, Manipal</div>
 <script type='template' id="tweetDisplayTemplate">
-<div class="section neutral">
+<div class="section neutral" data-id="${'<%='}hashId${'%>'}">
 	<div class='tweetHeader'>${'<%='}twitterActualName${'%>'}&nbsp;(<a href="http://www.twitter.com/${'<%='}twitterUserName${'%>'}" class="twitter-username" target="_blank">@${'<%='}twitterUserName${'%>'}</a>):</div>
 	<div class='tweetTextContent'>${'<%='}tweetText${'%>'}</div>
 	<span class='tweetPostedAt'>Posted on: ${'<%='}tweetTime${'%>'}</span>
@@ -27,6 +33,7 @@
 <script type='text/javascript' src='../js/namespace.js'></script>
 <script type='text/javascript' src='../js/jquery-2.0.3.js'></script>
 <script type='text/javascript' src='../js/underscore.js'></script>
+<script type='text/javascript' src='../js/crypto.js'></script>
 <script type='text/javascript' src='../js/appMain.js'></script>
 </body>
 </html>

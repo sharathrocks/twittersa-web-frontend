@@ -119,9 +119,7 @@ html {
 	margin:auto;
 }
 .footer {
-	position:absolute;
-	bottom:0;
-	right: 5px;
+	float: right;
 	font-size: 12px;
 }
 .line2 {
@@ -129,4 +127,7 @@ html {
 }
 .error {
 	color:#ff0000;
+}
+.optionsText {
+	font-size: 12px;
 }
