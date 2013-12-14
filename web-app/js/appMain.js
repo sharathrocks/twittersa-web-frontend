@@ -30,12 +30,13 @@ $(document).ready(function($){
     };
     
     TwitterSentimentAnalyser.analyseTweets = function (tweetText, hashId) {
+		var processedTweetText = tweetText.replace(/[^A-Za-z 0-9 \.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, '');
         $.ajax({
             url:"http://sapy27-sharathbs.rhcloud.com/analyse_sentiment",
             type:"POST",
             dataType:"json",
             data: {
-                "tweetText":tweetText
+                "tweetText":processedTweetText
             },
             crossDomain:true,
             success: function (data) {
