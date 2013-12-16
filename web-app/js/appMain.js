@@ -40,7 +40,7 @@ $(document).ready(function($){
             },
             crossDomain:true,
             success: function (data) {
-                console.log(JSON.stringify(data));
+                /*console.log(JSON.stringify(data));
                 var polarity = parseFloat(data.sentiment);
 				var classToBeAppended = 'neutral';
                 if (polarity >= -1 && polarity < 0) {
@@ -51,7 +51,20 @@ $(document).ready(function($){
                     classToBeAppended = 'positive';
                 } else {
                     classToBeAppended = 'neutral';
-                }
+                }*/
+				var sentiment = data.sentiment;
+				var classToBeAppended = 'neutral';
+				switch (sentiment) {
+					case "positive":
+						classToBeAppended = 'positive';
+						break;
+					case "negative":
+						classToBeAppended = 'negative';
+						break;
+					case "neutral":
+						classToBeAppended = 'neutral';
+						break;
+				}
                 $('[data-id="'+hashId+'"]').removeClass('neutral').addClass(classToBeAppended);
             },
             error: function (xhr, errorType, errorDescription) {
