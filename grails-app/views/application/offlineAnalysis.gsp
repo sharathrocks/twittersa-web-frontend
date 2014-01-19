@@ -3,20 +3,11 @@
 <link rel="stylesheet" type="text/css" href="../css/twitterSA.css">
 </head>
 <body>
-<div id='searchLoadingOverlay' class='searchLoadingOverlay'></div>
-<div id='searchLoadingOverlayTextContainer' class='searchLoadingOverlayTextContainer fixedCenter'><div class='overlaySpinner'></div></div>
-<div class='head'>Twitter sentiment analyser</div>
-<div class='appDescription'>Check out what twitterzens feel about your favorite topic.</div>
-<div class='appDescription line2'>To get started, enter the topic of your interest and hit the search button.</div>
+<div class='head'>Offline sentiment analyser</div>
+<div class='appDescription'>To get started, enter a sentence and hit the analyse button.</div>
 <div class='searchBoxContainer'>
-<div><input class='searchBox' type='text' placeholder='Search Twitter' id="twitterSearchBox"></div>
-<div class='searchButton' id='twitterSearch'></div>
-</div>
-<div id='searchOptions' class='optionsText'>
-
-<div>Include Retweets?</div>
-<input type='radio' name='includeRetweets' value='0' checked='checked'>No <br>
-<input type='radio' name='includeRetweets' value='1'>Yes
+<div><textarea class='offlineAnalyseTextArea' placeholder='Analyze Sentence' id="offlineAnalyseText"></textarea></div>
+<div class='analyseButton' id='analyseButton'></div>
 </div>
 
 <div class='searchResultsContainer' id='searchResultsContainer'>

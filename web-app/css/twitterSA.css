@@ -1,24 +1,8 @@
-@font-face {
-    font-family: "circula";
-    src: url("../fonts/circula-medium.otf");
-}
-@font-face {
-    font-family: "Steinerlight";
-    src: url("../fonts/Steinerlight.ttf");
-}
-@font-face {
-    font-family: "acid";
-    src: url("../fonts/acid.otf");
-}
-@font-face {
-    font-family: "Diavlo_BOOK_II_37";
-    src: url("../fonts/Diavlo_BOOK_II_37.otf");
-}
 html {
 	font-family:Helvetica, arial, freesans, clean, sans-serif;
 }
 .head{
-	font-family:'Diavlo_BOOK_II_37';
+	font-family:Helvetica;
 	text-align:center;
 	font-size:60px;
 	padding-top:55px;
@@ -32,27 +16,41 @@ html {
 .searchBox {
 	width:400px;
 	height:20px;
-	float:left;
 }
 .searchButton {
 	margin-left:20px;
-}
-.signInButton {
-	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -101px;
-	width: 382px;
-	height: 62px;
-	margin:auto;
+	background: url('../images/search_button.png');
+	width: 106px;
+	height: 39px;
+	margin:15px auto;
 	cursor:pointer;
 	display:block;
 }
-.signInButton:hover{
-	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -19px;	
-	
+.signInButton {
+	background: url('../images/sign_in_button.png');
+	width: 233px;
+	height: 39px;
+	margin:30px auto;
+	cursor:pointer;
+	display:block;
 }
-.signInButton:active{
-	background: url('../images/twitter_signin_sprite.png') no-repeat -17px -182px;	
-	
+.offlineAnalysis{
+	background: url('../images/offline_analysis_button.png');
+	width: 244px;
+	height: 39px;
+	margin:15px auto;
+	cursor:pointer;
+	display:block;
 }
+.analyseButton{
+	background: url('../images/analyse_button.png');
+	width: 119px;
+	height: 39px;
+	margin:15px auto;
+	cursor:pointer;
+	display:block;
+}
+
 .appDescription {
 	font-size:16px; 
 	margin: 36px 0 10px 0;
@@ -130,4 +128,8 @@ html {
 }
 .optionsText {
 	font-size: 12px;
+}
+.offlineAnalyseTextArea {
+	width: 400px;
+	height: 100px;
 }

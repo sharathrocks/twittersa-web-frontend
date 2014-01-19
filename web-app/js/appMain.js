@@ -108,8 +108,42 @@ $(document).ready(function($){
             error: function () {
                 TwitterSentimentAnalyser.UIManager.showLoadingOverlay(false);
                 $("#searchResultsContainer").text("").text("Error occurred");
+            }
+        });
+    });
+	
+	$('#analyseButton').unbind('click').bind('click',function(){
+        //Show loading overlay
+		var tweetText = $('#offlineAnalyseText').val();
+        var processedTweetText = tweetText.replace(/[^A-Za-z 0-9 \.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, '');
+		$('#searchResultsContainer').empty().append('<div class="section neutral">'+tweetText+'</div>')
+        $.ajax({
+            url:"http://sapy27-sharathbs.rhcloud.com/analyse_sentiment",
+            type:"POST",
+            dataType:"json",
+            data: {
+                "tweetText":processedTweetText
             },
-            timeout:30000
+            crossDomain:true,
+            success: function (data) {
+                var sentiment = data.sentiment;
+				var classToBeAppended = 'neutral';
+				switch (sentiment) {
+					case "positive":
+						classToBeAppended = 'positive';
+						break;
+					case "negative":
+						classToBeAppended = 'negative';
+						break;
+					case "neutral":
+						classToBeAppended = 'neutral';
+						break;
+				}
+                $('#searchResultsContainer').children().removeClass('neutral').addClass(classToBeAppended);
+            },
+            error: function (xhr, errorType, errorDescription) {
+                console.error(errorType);
+            }
         });
     });
     
